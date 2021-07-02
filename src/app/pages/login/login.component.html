@@ -3,14 +3,16 @@
         <div class="row mt20">
             <div class="col-md-6 offset-3">
                 <h1 class="text-center">Login</h1>
-                <form>
+              
+                <form (ngSubmit)="formSubmit()">
 
                    
                     <!-- email field-->
                     <mat-form-field class="full-width" appearance="outline">
-                        <mat-label>Email</mat-label>
-                        <input type="email" required 
-                        
+                        <mat-label>Username</mat-label>
+                        <input type="type" required 
+                        [(ngModel)] = "loginData.username"
+                        name="username"
                         matInput placeholder="Enter here">
                         
                       </mat-form-field>
@@ -19,13 +21,14 @@
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Password</mat-label>
                         <input type="password" required
-                        
+                        [(ngModel)] = "loginData.password"
+                        name="password"
                         matInput placeholder="Enter here">
                       </mat-form-field>
                       
 
                     <div class="container text-center">
-                        <button type="submit" mat-raised-button color="primary">Register</button>
+                        <button type="submit" mat-raised-button color="primary">Login</button>
                     </div>
                 </form>
             </div>

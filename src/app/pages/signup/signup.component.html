@@ -16,6 +16,16 @@
                         <mat-hint>Email must be unique</mat-hint>
                       </mat-form-field>
 
+                      <!-- username field-->
+                    <mat-form-field class="full-width" appearance="outline">
+                      <mat-label>Username</mat-label>
+                      <input type="text" required 
+                      [(ngModel)] = "user.username"
+                      name="username"
+                      matInput placeholder="Enter here">
+                      <mat-hint>Username must be unique</mat-hint>
+                    </mat-form-field>
+
                       <!-- password field-->
                     <mat-form-field class="full-width" appearance="outline">
                         <mat-label>Password</mat-label>
